@@ -7,7 +7,7 @@ class Solution:
         
         length = len(nums)
         
-        for i in range(length-2):
+        for i in range(length-2): #we have two pointer L and r so -2
             
             if i>0 and nums[i] == nums[i-1]:
                 continue
@@ -20,7 +20,7 @@ class Solution:
                 elif total >0:
                     r = r-1
                 else:
-                    res.append([nums[i],nums[l], nums[r] ])
+                    res.append([nums[i],nums[l], nums[r] ]) #check for repetation
                     while l<r and nums[l] ==nums[l+1]:
                         l = l+1
                     while l<r and nums[r] == nums[r-1]:
